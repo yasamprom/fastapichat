@@ -3,8 +3,8 @@
 ## How to test?
 ```
 git clone https://github.com/yasamprom/fastapichat.git
-cd fastapichat/src
-python -m unittest src.test
+cd fastapichat/fastapichat
+python -m unittest fastapichat.test
 ```
 
 ## How to run chat in docker?
@@ -19,7 +19,7 @@ docker-compose up
 git clone https://github.com/yasamprom/fastapichat.git
 pip install requirements.txt
 cd fastapichat
-uvicorn src.main:app --reload
+uvicorn fastapichat.main:app --reload
 ```
 
 ## Docs

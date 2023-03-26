@@ -19,5 +19,5 @@ jobs:
       - name: Tests
         run: |
           echo $PYTHONPATH
-          export PYTHONPATH="${PYTHONPATH}:/src"
-          python -m unittest src.test
+          export PYTHONPATH="${PYTHONPATH}:/fastapichat"
+          python -m unittest fastapichat.test
