@@ -23,8 +23,10 @@ uvicorn fastapichat.main:app --reload
 ```
 
 ## Docs
+App can be started on localhost. Read instructions above.
 
 We have few objects: User, Chat, Message. They are managed by UserManager and ChatManager. Here is the list of methods.
+See examples below how to send queries
 * ### Register user
     Generate personal id for new user and return it.
     ```
