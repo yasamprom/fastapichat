@@ -18,8 +18,8 @@ docker-compose up
 ```
 git clone https://github.com/yasamprom/fastapichat.git
 pip install requirements.txt
-cd fastapichat/src
-uvicorn main:app --reload
+cd fastapichat
+uvicorn src.main:app --reload
 ```
 
 ## Docs
