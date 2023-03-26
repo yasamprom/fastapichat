@@ -25,7 +25,7 @@ uvicorn main:app --reload
 ## Docs
 
 We have few objects: User, Chat, Message. They are managed by UserManager and ChatManager. Here is the list of methods.
-* ####Register user
+* ### Register user
     Generate personal id for new user and return it.
     ```
     curl -X POST  http://127.0.0.1:8000/user/register
@@ -34,7 +34,7 @@ We have few objects: User, Chat, Message. They are managed by UserManager and Ch
         {"user_id": int}
     ```
 
-* ####Get user's data
+* ### Get user's data
     Returns list of user's contacts (chats)
      ```
     curl -X GET  http://127.0.0.1:8000/user/{user_id}
@@ -44,7 +44,7 @@ We have few objects: User, Chat, Message. They are managed by UserManager and Ch
         404, user not found
     ```
  
-* ####Delete user
+* ### Delete user
      ```
     curl -X DELETE  http://127.0.0.1:8000/user/{user_id}
   
@@ -53,7 +53,7 @@ We have few objects: User, Chat, Message. They are managed by UserManager and Ch
         404, user not found
     ```
 
-* ####Start chat
+* ### Start chat
      ```
     curl -H "Content-Type: application/json" -X POST -d '{"sender_id":"1", "receiver_id":"2"}' http://127.0.0.1:8000/chat/start
     response: 
@@ -62,7 +62,7 @@ We have few objects: User, Chat, Message. They are managed by UserManager and Ch
         405, chat exists
     ```
 
-* ####Send message
+* ### Send message
      ```
     curl -H "Content-Type: application/json" -X POST -d '{"sender_id":"1", "receiver_id":"2", "text":"Hello user 2"}' http://127.0.0.1:8000/messages/send
 
@@ -70,7 +70,7 @@ We have few objects: User, Chat, Message. They are managed by UserManager and Ch
         200, {"message_id": string}
         404, chat was not created
     ```
-* ####Get chat history
+* ### Get chat history
      ```
     curl -X GET 'http://127.0.0.1:8000/chat/history?sender_id=1?receiver_id=2'
   
