@@ -4,7 +4,7 @@ import string
 
 from starlette.testclient import TestClient
 
-from main import app
+from src.main import app
 import unittest
 
 

@@ -1,6 +1,6 @@
 import time
 from pydantic import BaseModel
-import primitive_objects
+import src.primitive_objects as primitive_objects
 
 
 class UserManager:

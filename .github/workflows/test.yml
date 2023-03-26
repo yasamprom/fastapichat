@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test chat
     steps:
+      - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -16,4 +17,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Tests
-        run: python -m unittest src.test
+        run: |
+          echo $PYTHONPATH
+          export PYTHONPATH="${PYTHONPATH}:/src"
+          python -m unittest src.test

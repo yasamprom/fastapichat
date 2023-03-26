@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 
-import managers
-import primitive_objects
+import src.managers as managers
+import src.primitive_objects as primitive_objects
 
 
 app = FastAPI()
