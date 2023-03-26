@@ -107,4 +107,3 @@ async def create_message(new_message: primitive_objects.IncomingMessage):
     message = primitive_objects.Message(new_message)
     await cm.process_message(message)
     return {"message_id": message.message_id_}
-
