@@ -17,8 +17,8 @@ docker-compose up
 ## How to run chat on local machine?
 ```
 git clone https://github.com/yasamprom/fastapichat.git
-pip install requirements.txt
 cd fastapichat
+pip install requirements.txt
 uvicorn fastapichat.main:app --reload
 ```
 
